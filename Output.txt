@@ -1,0 +1,57 @@
+An example from our book (Introduction to Bioinformatics Algorithms by Jones and Pevzner - page 86):
+n = 5; m = 10; x = [0, 2, 4, 7, 10]; l = [2, 2, 3, 3, 4, 5, 6, 7, 8, 10]
+Brute Force PDP; Average Time Taken: 1000293 nanoseconds; Return Value: [0, 2, 4, 7, 10]
+Another Brute Force PDP; Average Time Taken: 215551 nanoseconds; Return Value: [0, 2, 4, 7, 10]
+Branch and Bound PDP; Average Time Taken: 98587 nanoseconds; Return Value: [[0, 2, 4, 7, 10], [0, 3, 6, 8, 10]]
+
+Sets x generated at random and l created using them:
+n = 2; m = 15; x = [0, 15]; l = [15]
+Brute Force PDP; Average Time Taken: 11992 nanoseconds; Return Value: [0, 15]
+Another Brute Force PDP; Average Time Taken: 12607 nanoseconds; Return Value: [0, 15]
+Branch and Bound PDP; Average Time Taken: 7140 nanoseconds; Return Value: [[0, 15]]
+
+n = 3; m = 15; x = [0, 11, 15]; l = [4, 11, 15]
+Brute Force PDP; Average Time Taken: 43190 nanoseconds; Return Value: [0, 4, 15]
+Another Brute Force PDP; Average Time Taken: 11105 nanoseconds; Return Value: [0, 4, 15]
+Branch and Bound PDP; Average Time Taken: 22169 nanoseconds; Return Value: [[0, 11, 15], [0, 4, 15]]
+
+n = 4; m = 15; x = [0, 9, 13, 15]; l = [2, 4, 6, 9, 13, 15]
+Brute Force PDP; Average Time Taken: 284787 nanoseconds; Return Value: [0, 2, 6, 15]
+Another Brute Force PDP; Average Time Taken: 54025 nanoseconds; Return Value: [0, 9, 13, 15]
+Branch and Bound PDP; Average Time Taken: 57934 nanoseconds; Return Value: [[0, 9, 13, 15], [0, 2, 6, 15]]
+
+n = 5; m = 15; x = [0, 1, 6, 13, 15]; l = [1, 2, 5, 6, 7, 9, 12, 13, 14, 15]
+Brute Force PDP; Average Time Taken: 3001003 nanoseconds; Return Value: [0, 1, 6, 13, 15]
+Another Brute Force PDP; Average Time Taken: 240386 nanoseconds; Return Value: [0, 1, 6, 13, 15]
+Branch and Bound PDP; Average Time Taken: 88965 nanoseconds; Return Value: [[0, 2, 9, 14, 15], [0, 1, 6, 13, 15]]
+
+n = 6; m = 15; x = [0, 4, 7, 8, 11, 15]; l = [1, 3, 3, 4, 4, 4, 4, 7, 7, 7, 8, 8, 11, 11, 15]
+Brute Force PDP; Average Time Taken: 7717413 nanoseconds; Return Value: [0, 4, 7, 8, 11, 15]
+Another Brute Force PDP; Average Time Taken: 233908 nanoseconds; Return Value: [0, 4, 7, 8, 11, 15]
+Branch and Bound PDP; Average Time Taken: 181910 nanoseconds; Return Value: [[0, 4, 7, 8, 11, 15]]
+
+n = 7; m = 10; x = [0, 1, 2, 3, 7, 9, 10]; l = [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6, 6, 7, 7, 7, 8, 8, 9, 9, 10]
+Brute Force PDP; Average Time Taken: 1133028 nanoseconds; Return Value: [0, 1, 2, 3, 7, 9, 10]
+Another Brute Force PDP; Average Time Taken: 1161305 nanoseconds; Return Value: [0, 1, 2, 3, 7, 9, 10]
+Branch and Bound PDP; Average Time Taken: 248194 nanoseconds; Return Value: [[0, 1, 3, 7, 8, 9, 10], [0, 1, 2, 3, 7, 9, 10]]
+
+n = 7; m = 11; x = [0, 3, 4, 7, 8, 9, 11]; l = [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 9, 11]
+Brute Force PDP; Average Time Taken: 3147166 nanoseconds; Return Value: [0, 2, 3, 4, 7, 8, 11]
+Another Brute Force PDP; Average Time Taken: 1034400 nanoseconds; Return Value: [0, 2, 3, 4, 7, 8, 11]
+Branch and Bound PDP; Average Time Taken: 119402 nanoseconds; Return Value: [[0, 2, 3, 4, 7, 8, 11], [0, 3, 4, 7, 8, 9, 11]]
+
+n = 7; m = 12; x = [0, 2, 6, 7, 10, 11, 12]; l = [1, 1, 1, 2, 2, 3, 4, 4, 4, 5, 5, 5, 6, 6, 7, 8, 9, 10, 10, 11, 12]
+Brute Force PDP; Average Time Taken: 2465168 nanoseconds; Return Value: [0, 1, 2, 5, 6, 10, 12]
+Another Brute Force PDP; Average Time Taken: 2077266 nanoseconds; Return Value: [0, 1, 2, 5, 6, 10, 12]
+Branch and Bound PDP; Average Time Taken: 123899 nanoseconds; Return Value: [[0, 2, 6, 7, 10, 11, 12], [0, 1, 2, 5, 6, 10, 12]]
+
+n = 7; m = 13; x = [0, 6, 9, 10, 11, 12, 13]; l = [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6, 6, 7, 9, 10, 11, 12, 13]
+Brute Force PDP; Average Time Taken: 3049266 nanoseconds; Return Value: [0, 1, 2, 3, 4, 7, 13]
+Another Brute Force PDP; Average Time Taken: 1957491 nanoseconds; Return Value: [0, 1, 2, 3, 4, 7, 13]
+Branch and Bound PDP; Average Time Taken: 112004 nanoseconds; Return Value: [[0, 1, 2, 3, 4, 7, 13], [0, 6, 9, 10, 11, 12, 13]]
+
+n = 7; m = 14; x = [0, 3, 8, 9, 11, 12, 14]; l = [1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 6, 6, 8, 8, 9, 9, 11, 11, 12, 14]
+Brute Force PDP; Average Time Taken: 8231982 nanoseconds; Return Value: [0, 2, 3, 5, 6, 11, 14]
+Another Brute Force PDP; Average Time Taken: 1693654 nanoseconds; Return Value: [0, 2, 3, 5, 6, 11, 14]
+Branch and Bound PDP; Average Time Taken: 150563 nanoseconds; Return Value: [[0, 2, 3, 5, 6, 11, 14], [0, 3, 8, 9, 11, 12, 14]]
+
